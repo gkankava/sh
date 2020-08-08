@@ -1,0 +1,62 @@
+// pallete
+$primary: #1d1f24;
+$secondary: #2f3238;
+$custom: #eeeeee;
+$lod: #b7b7b7;
+
+//fonts
+@import "./fonts/bpg-arial-master/css/bpg-arial.min.css";
+@import "./fonts/bpg-nateli-master/css/bpg-nateli.min.css";
+
+$arial: "BPG Arial", sans-serif;
+$nateli: "BPG Nateli", sans-serif;
+$noto: "Noto Sans", sans-serif;
+
+.english {
+  * {
+    font-family: $noto;
+  }
+}
+.georgian {
+  * {
+    font-family: $nateli;
+  }
+}
+.language-select * {
+  font-family: $noto;
+}
+//container
+@media screen and (min-width: 2560px) {
+  .dif-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 2560px;
+  }
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 1050px) {
+  .container {
+    // width: 1050px;
+    width: 100%;
+  }
+}
+@media (min-width: 1270px) {
+  .container {
+    width: 1270px;
+  }
+}
+
+//hamburger
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: 27px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 7px;
+$hamburger-layer-color: $primary;
+$hamburger-layer-border-radius: 10px;
+$hamburger-hover-opacity: 0.7;
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";

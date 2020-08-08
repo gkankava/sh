@@ -1,0 +1,76 @@
+@import "./_setup.scss";
+@import "../../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
+@import "./navbar.scss";
+@import "./hero.scss";
+@import "./gallery.scss";
+@import "./transition.scss";
+@import "./skew.scss";
+@import "./homepage.scss";
+@import "./icons/line-awesome-1.3.0/scss/line-awesome.scss";
+@import "./footer.scss";
+@import "./location.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+}
+* {
+  &:active,
+  :focus {
+    outline: none;
+  }
+}
+
+.app-wrapper {
+  position: relative;
+}
+
+section {
+  margin-top: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 2rem;
+}
+#sh-main {
+  height: 100%;
+}
+
+.app-wrapper {
+  padding-bottom: 400px;
+  min-height: 100%;
+}
+
+.book-btn {
+  display: inline-block;
+  border: 2px solid $primary;
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 200;
+  background-color: #f8f8f8;
+  transition: all 0.5s;
+  a {
+    text-decoration: none;
+    color: $primary;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $secondary;
+    a {
+      color: white;
+    }
+  }
+}

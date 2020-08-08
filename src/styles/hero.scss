@@ -1,0 +1,148 @@
+#hero {
+  position: relative;
+  background: url(../media/p1_b.jpg);
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  opacity: 0.9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 100;
+  margin-top: 0;
+
+  header {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: lighter;
+    letter-spacing: 8px;
+
+    .border {
+      background-color: rgba($color: black, $alpha: 0.5);
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
+
+.georgian {
+  #hero {
+    header {
+      font-size: 40px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .georgian {
+    #hero {
+      header {
+        font-size: 60px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 870px) {
+  #hero {
+    header {
+      .border {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1090px) {
+  #hero {
+    min-height: calc(100vh - 150px);
+  }
+}
+
+#more-arrows {
+  position: relative;
+  width: 75px;
+  height: 65px;
+
+  &:hover {
+    polygon {
+      fill: white;
+      transition: all 0.2s ease-out;
+
+      &.arrow-bottom {
+        transform: translateY(-18px);
+      }
+
+      &.arrow-top {
+        transform: translateY(18px);
+      }
+    }
+  }
+}
+
+polygon {
+  fill: white;
+  transition: all 0.2s ease-out;
+
+  &.arrow-middle {
+    opacity: 0.75;
+  }
+
+  &.arrow-top {
+    opacity: 0.5;
+  }
+}
+
+.arrow-top {
+  animation: blink 1s linear infinite;
+  animation-delay: 0.1s;
+}
+.arrow-middle {
+  animation: blink 1s linear infinite;
+  animation-delay: 0.2s;
+}
+.arrow-bottom {
+  animation: blink 1s linear infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#more-arrows {
+  &:hover {
+    .arrow-top,
+    .arrow-middle,
+    .arrow-bottom {
+      animation: 0;
+    }
+  }
+}
+@media screen and (min-width: 2560px) {
+  .dif-container {
+    #hero {
+      min-height: unset;
+      height: 1440px;
+    }
+  }
+}

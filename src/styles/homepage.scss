@@ -1,0 +1,38 @@
+#para {
+  padding: 1rem 0.5rem;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  .p-wrapper {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      text-align: center;
+      width: 100%;
+      letter-spacing: 0.5rem;
+      font-weight: 100;
+    }
+    p {
+      letter-spacing: 1px;
+      font-weight: 200;
+      line-height: 1.5rem;
+      width: 100%;
+      text-align: justify;
+      text-justify: inter-ideograph;
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #para {
+    .p-wrapper {
+      flex-direction: row;
+      h2 {
+        width: 50%;
+      }
+      p {
+        width: 50%;
+      }
+    }
+  }
+}
