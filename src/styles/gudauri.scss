@@ -1,0 +1,132 @@
+#gudauri {
+  position: relative;
+  .content {
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    div {
+      width: 100%;
+      p {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        text-indent: 10px;
+      }
+    }
+    margin-bottom: 5rem;
+  }
+
+  .video {
+    width: 100%;
+    background: url(../media//p1_dark.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 300px;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 500;
+    .la-play-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 100px;
+      color: rgba($color: white, $alpha: 0.7);
+      &:hover {
+        color: white;
+        cursor: pointer;
+      }
+    }
+    .fx-video {
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      height: 0;
+      width: 0;
+      background-color: black;
+      z-index: 10000;
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      transition: all 0.7s;
+      .yt-video {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+        width: 100%;
+      }
+      .la-times-circle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 35px;
+        color: rgba($color: white, $alpha: 0.7);
+        &:hover {
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 0.5rem;
+  }
+}
+
+#gudauri {
+  .video {
+    .active-v {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s, 0s;
+      .yt-video {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0.7s;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #gudauri {
+    .content {
+      flex-direction: row;
+      padding: 0;
+      div {
+        width: 100%;
+        p {
+          width: 90%;
+          padding: 0.5rem;
+          margin-bottom: 0;
+          text-indent: 5px;
+        }
+      }
+      margin-bottom: 5rem;
+    }
+    .video {
+      .fx-video {
+        .yt-video {
+          width: 640px;
+          height: 390px;
+        }
+      }
+    }
+    .cards {
+      padding: 0;
+    }
+  }
+}

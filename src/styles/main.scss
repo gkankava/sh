@@ -9,6 +9,9 @@
 @import "./icons/line-awesome-1.3.0/scss/line-awesome.scss";
 @import "./footer.scss";
 @import "./location.scss";
+@import "./gudauri.scss";
+@import "./card";
+@import "./contact.scss";
 
 * {
   margin: 0;
@@ -43,6 +46,12 @@ h1,
 h2,
 h3 {
   margin-bottom: 2rem;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 200;
+  text-align: center;
+  letter-spacing: 0.1rem;
 }
 #sh-main {
   height: 100%;

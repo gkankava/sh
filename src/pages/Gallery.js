@@ -1,7 +1,7 @@
 import React from "react";
 import ImageGallery from "react-image-gallery";
 import { images } from "../content/Gallery";
-import { Fade, Flash } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const Gallery = (props) => {
   return (
